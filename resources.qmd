@@ -12,16 +12,16 @@ format: html
 ### Contracts2.0
 An EU-Horizon project focusing on innovative contract solutions for sustainable agriculture. I worked on data processing and analysis to support policy recommendations.
 
-<a href="https://www.project-contracts20.eu/" class="project-link" target="_blank">Visit Project &rarr;</a>
+<a href="https://www.project-contracts20.eu/" class="project-link" target="_blank">Project Website &rarr;</a>
 </div>
 :::
 
 ::: {.g-col-12 .g-col-md-6}
 <div class="project-card">
 ### AgEnRes
-Analyzing the resilience of the agricultural sector. My contribution involves evaluating economic indicators and modelling risk management strategies for European farmers.
+Analyzing the resilience of the agricultural sector. My contribution involves evaluating behavioral drivers of risk management tools indicators and modelling risk management strategies for European farmers.
 
-<a href="https://agenres.eu/" class="project-link" target="_blank">Visit Project &rarr;</a>
+<a href="https://agenres.eu/" class="project-link" target="_blank">Project Website &rarr;</a>
 </div>
 :::
 

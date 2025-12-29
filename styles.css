@@ -4,18 +4,20 @@
 :root {
   --font-sans: 'Inter', sans-serif;
   --font-serif: 'Playfair Display', serif;
-  
+
   --color-bg: #ffffff;
   --color-text: #2c3e50;
-  --color-primary: #2c3e50; /* Deep blue-grey */
-  --color-accent: #3498db; /* Bright yet professional blue */
+  --color-primary: var(--color-ana-2);
+  /* Deep blue-grey */
+  --color-accent: var(--color-ana-1);
+  /* Bright yet professional blue */
   --color-light: #f8f9fa;
   --color-border: #e9ecef;
-  
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.05);
-  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
-  
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
   --radius-sm: 4px;
   --radius-md: 8px;
 }
@@ -27,7 +29,12 @@ body {
   background-color: var(--color-bg);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-serif);
   color: var(--color-primary);
   font-weight: 700;
@@ -113,19 +120,19 @@ a:hover {
 }
 
 .btn-secondary {
-    display: inline-block;
-    background-color: transparent;
-    color: var(--color-primary) !important;
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    font-weight: 500;
-    border: 1px solid var(--color-border);
-    margin-left: 1rem;
-    transition: all 0.2s;
+  display: inline-block;
+  background-color: transparent;
+  color: var(--color-primary) !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  border: 1px solid var(--color-border);
+  margin-left: 1rem;
+  transition: all 0.2s;
 }
 
 .btn-secondary:hover {
-    background-color: var(--color-light);
+  background-color: var(--color-light);
 }
 
 /* Project Cards */
@@ -177,6 +184,14 @@ a:hover {
 }
 
 /* Utilities */
-.text-center { text-align: center; }
-.mb-4 { margin-bottom: 2rem; }
-.mt-4 { margin-top: 2rem; }
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
+.mt-4 {
+  margin-top: 2rem;
+}

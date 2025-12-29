@@ -1,0 +1,14 @@
+:root {
+  --color-ana-1: oklch(50% 0.18 271);
+  --color-ana-1-contrast: #fff;
+  --color-ana-2: oklch(30% 0.13 241);
+  --color-ana-2-contrast: #fff;
+  --color-ana-3: oklch(40% 0.146 251);
+  --color-ana-3-contrast: #fff;
+  --color-ana-4: oklch(65% 0.138 261);
+  --color-ana-4-contrast: #000;
+  --color-ana-5: oklch(75% 0.113 286);
+  --color-ana-5-contrast: #000;
+  --color-ana-6: oklch(85% 0.097 301);
+  --color-ana-6-contrast: #000;
+}

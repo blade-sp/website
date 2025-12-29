@@ -1,14 +1,14 @@
 ---
-pagetitle: "Riccardo Spada - PhD Candidate"
+pagetitle: "Riccardo Spada"
 format: html
 ---
 
 ::: {.hero-section}
 ::: {.hero-text}
-# Riccardo Spada
-<div class="subtitle">PhD Candidate in Business Economics at Wageningen University</div>
+<div class="subtitle">PhD Candidate - Business Economics Group - Wageningen University</div>
 
-My research focuses on agricultural economics, finance, and risk management. I am passionate about building resilience in agri-food systems through data-driven policy analysis.
+My research focuses on agricultural economics and risk management. I'm passionate about data and personal finance.
+
 
 <br>
 
@@ -21,11 +21,11 @@ My research focuses on agricultural economics, finance, and risk management. I a
 :::
 :::
 
-<br>
-<br>
-<hr>
-<br>
-
-<div class="text-center" style="color: #666;">
-[LinkedIn](https://www.linkedin.com/in/riccardo-spada) &nbsp;&bull;&nbsp; [GitHub](https://github.com/blade-sp) &nbsp;&bull;&nbsp; [Email](mailto:riccardo.spada@wur.nl)
+<div class="text-center mt-4">
+  <a href="https://www.linkedin.com/in/riccardo-spada" class="text-decoration-none" style="color: var(--color-primary); margin: 0 15px; transition: opacity 0.2s;">
+    <i class="bi bi-linkedin" style="font-size: 2.2rem;"></i>
+  </a>
+  <a href="https://github.com/blade-sp" class="text-decoration-none" style="color: var(--color-primary); margin: 0 15px; transition: opacity 0.2s;">
+    <i class="bi bi-github" style="font-size: 2.2rem;"></i>
+  </a>
 </div>

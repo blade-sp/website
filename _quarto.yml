@@ -25,7 +25,9 @@ website:
 format:
   html:
     theme: flatly   
-    css: styles.css
+    css: 
+      - palette/warm-jay.css
+      - styles.css
     smooth-scroll: true
     highlight-style: github
-    toc: true
+    toc: false
