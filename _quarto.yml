@@ -17,7 +17,7 @@ website:
   page-footer:
     center: "© Riccardo Spada 2025"
 
-  favicon: assets/favicon/favicon.ico   
+  favicon: assets/favicon/favicon-16x16.png   
 
 format:
   html:
