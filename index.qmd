@@ -12,8 +12,8 @@ My research focuses on agricultural economics and risk management. I'm passionat
 
 <br>
 
-<a href="mailto:riccardo.spada@wur.nl" class="btn-primary">Contact Me</a>
-<a href="cv.qmd" class="btn-secondary">View CV</a>
+<a href="resources.qmd" class="btn-primary">Resources</a>
+<a href="cv.qmd" class="btn-primary">View CV</a>
 :::
 
 ::: {.profile-img-container}

@@ -10,7 +10,7 @@ format: html
 ::: {.g-col-12 .g-col-md-6}
 <div class="project-card">
 ### Contracts2.0
-An EU-Horizon project focusing on innovative contract solutions for sustainable agriculture. I worked on data processing and analysis to support policy recommendations.
+EU-Horizon project exploring innovative contract solutions in the agri-food sector. I worked on data processing and analysis with R.
 
 <a href="https://www.project-contracts20.eu/" class="project-link" target="_blank">Project Website &rarr;</a>
 </div>
@@ -19,7 +19,7 @@ An EU-Horizon project focusing on innovative contract solutions for sustainable 
 ::: {.g-col-12 .g-col-md-6}
 <div class="project-card">
 ### AgEnRes
-Analyzing the resilience of the agricultural sector. My contribution involves evaluating behavioral drivers of risk management tools indicators and modelling risk management strategies for European farmers.
+EU-Horizon project focusing on Agricultural Energy Resilience. My contribution involves evaluating behavioral drivers of risk management tools adoption and developing risk management strategies for European farmers.
 
 <a href="https://agenres.eu/" class="project-link" target="_blank">Project Website &rarr;</a>
 </div>
