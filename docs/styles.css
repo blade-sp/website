@@ -8,7 +8,8 @@
   --color-bg: #ffffff;
   --color-text: #2c3e50;
   --color-primary: oklch(30% 0.13 241);
-  --color-secondary: oklch(50% 0.18 271);
+  --color-secondary: oklch(40% 0.146 251);
+  --color-tertiary: oklch(50% 0.18 271);
   --color-accent-primary: oklch(75% 0.113 286);
   --color-accent-secondary: oklch(85% 0.097 301);
   --color-border: #e9ecef;
@@ -42,9 +43,30 @@ body {
   background-color: var(--color-bg);
 }
 
-h1,
-h2,
-h3,
+h1 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--color-tertiary);
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+
 h4,
 h5,
 h6 {

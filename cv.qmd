@@ -31,15 +31,15 @@ format: html
 **Wageningen University & Research, Netherlands**  
 *2024–Present*
 
-### MSc in Business and Economics
-**Swedish University of Agricultural Sciences (SLU), Sweden**  
-*2021–2024*  
-*Part of AFEPA Double Degree Program*
+### Double Master's program in Agricultural, Food, and Environmental Policy Analysis (AFEPA) 
 
-### MSc in Agricultural and Food Economics
-**Catholic University of Sacred Heart, Italy**  
+* ##### MSc in Business and Economics
+    **Swedish University of Agricultural Sciences (SLU), Sweden**
+
+* ##### MSc in Agricultural and Food Economics
+    **Universita Cattolica del Sacro Cuore, Italy**  
+
 *2021–2024*  
-*Part of AFEPA Double Degree Program*
 
 ### BSc in Biotechnology
 **University of Verona, Italy**  

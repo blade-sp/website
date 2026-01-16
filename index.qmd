@@ -5,7 +5,8 @@ format: html
 
 ::: {.hero-section}
 ::: {.hero-text}
-<div class="subtitle">PhD Candidate - Business Economics Group - Wageningen University</div>
+
+## PhD Candidate - Business Economics Group - Wageningen University
 
 My research focuses on agricultural economics and risk management. I'm passionate about data and personal finance.
 
