@@ -16,15 +16,13 @@ website:
         href: cv.qmd
   page-footer:
     center: "© Riccardo Spada 2025"
-    # Add a logo or image to the navbar:
-    # logo: logo.png   
+
   favicon: assets/favicon/favicon.ico   
 
 format:
   html:
     theme: flatly   
     css: 
-      - palette/warm-jay.css
       - styles.css
     smooth-scroll: true
     highlight-style: github

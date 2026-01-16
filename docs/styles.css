@@ -7,12 +7,25 @@
 
   --color-bg: #ffffff;
   --color-text: #2c3e50;
-  --color-primary: var(--color-ana-2);
-  /* Deep blue-grey */
-  --color-accent: var(--color-ana-1);
-  /* Bright yet professional blue */
-  --color-light: var(--color-ana-5);
+  --color-primary: oklch(30% 0.13 241);
+  --color-secondary: oklch(50% 0.18 271);
+  --color-accent-primary: oklch(75% 0.113 286);
+  --color-accent-secondary: oklch(85% 0.097 301);
   --color-border: #e9ecef;
+
+  --color-ana-1: oklch(50% 0.18 271);
+  --color-ana-1-contrast: #fff;
+  --color-ana-2: oklch(30% 0.13 241);
+  --color-ana-2-contrast: #fff;
+  --color-ana-3: oklch(40% 0.146 251);
+  --color-ana-3-contrast: #fff;
+  --color-ana-4: oklch(65% 0.138 261);
+  --color-ana-4-contrast: #000;
+  --color-ana-5: oklch(75% 0.113 286);
+  --color-ana-5-contrast: #000;
+  --color-ana-6: oklch(85% 0.097 301);
+  --color-ana-6-contrast: #000;
+
 
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -58,6 +71,7 @@ a:hover {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--color-border);
   padding: 1rem 0;
+  color: var(--color-primary);
 }
 
 .navbar-brand {
@@ -66,6 +80,21 @@ a:hover {
   letter-spacing: -0.5px;
   font-size: 1.5rem;
   color: var(--color-primary) !important;
+}
+
+.navbar-nav .nav-link {
+  color: var(--color-primary) !important;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--color-accent-primary) !important;
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--color-accent-primary) !important;
+  font-weight: 700;
 }
 
 /* Hero Section */
@@ -117,6 +146,7 @@ a:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
   color: white;
+  background-color: var(--color-accent-primary);
 }
 
 .btn-secondary {
@@ -132,7 +162,7 @@ a:hover {
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-light);
+  background-color: var(--color-accent-primary);
 }
 
 /* Project Cards */
