@@ -13,24 +13,58 @@ This tool allows you to calculate the future value of an investment with compoun
 library(shiny)
 
 ui <- fluidPage(
-  sidebarLayout(
-    sidebarPanel(
-      numericInput("principal", "Initial Investment ($)", value = 10000, min = 0, step = 100),
-      numericInput("monthly", "Monthly Contribution ($)", value = 100, min = 0, step = 10),
-      sliderInput("rate", "Annual Interest Rate (%)", min = 0.1, max = 15, value = 7, step = 0.1),
-      sliderInput("years", "Investment Horizon (Years)", min = 1, max = 40, value = 20, step = 1)
+  fluidRow(
+    column(
+      3,
+      numericInput(
+        "principal",
+        "Initial Investment (EUR)",
+        value = 10000,
+        min = 0,
+        step = 100
+      )
     ),
-    mainPanel(
-      h3("Results"),
-      tableOutput("summary"),
-      h4("Year-by-Year Breakdown"),
-      tableOutput("yearly_table")
+    column(
+      3,
+      numericInput(
+        "monthly",
+        "Monthly Contribution (EUR)",
+        value = 100,
+        min = 0,
+        step = 10
+      )
+    ),
+    column(
+      3,
+      sliderInput(
+        "rate",
+        "Annual Return (%)",
+        min = 0.1,
+        max = 15,
+        value = 5,
+        step = 0.1
+      )
+    ),
+    column(
+      3,
+      sliderInput(
+        "years",
+        "Investment Horizon (Years)",
+        min = 1,
+        max = 50,
+        value = 20,
+        step = 1
+      )
     )
-  )
+  ),
+  hr(),
+  h4("Growth Over Time"),
+  plotOutput("growth_plot"),
+  h3("Results"),
+  uiOutput("summary")
 )
 
 server <- function(input, output, session) {
-
   results <- reactive({
     P <- input$principal
     C <- input$monthly
@@ -56,30 +90,85 @@ server <- function(input, output, session) {
     )
   })
 
-  output$summary <- renderTable({
+  output$summary <- renderUI({
     data <- results()
     final <- data[nrow(data), ]
-    data.frame(
-      Metric = c("Total Invested", "Final Balance", "Total Gains", "Return (%)"),
-      Value = c(
-        paste0("$", formatC(final$Invested, format = "f", digits = 0, big.mark = ",")),
-        paste0("$", formatC(final$Balance, format = "f", digits = 0, big.mark = ",")),
-        paste0("$", formatC(final$Gains, format = "f", digits = 0, big.mark = ",")),
-        paste0(round(final$Gains / final$Invested * 100, 1), "%")
-      )
-    )
-  }, striped = TRUE, width = "100%")
 
-  output$yearly_table <- renderTable({
-    data <- results()
-    yearly <- data[data$Month %% 12 == 0 & data$Month > 0, ]
-    data.frame(
-      Year = as.integer(yearly$Year),
-      Invested = paste0("$", formatC(yearly$Invested, format = "f", digits = 0, big.mark = ",")),
-      Balance = paste0("$", formatC(yearly$Balance, format = "f", digits = 0, big.mark = ",")),
-      Gains = paste0("$", formatC(yearly$Gains, format = "f", digits = 0, big.mark = ","))
+    fmt <- function(x) paste0("\u20ac", formatC(x, format = "f", digits = 0, big.mark = ","))
+
+    rows <- list(
+      list(label = "Total Invested", value = fmt(final$Invested), highlight = FALSE),
+      list(label = "Final Balance",  value = fmt(final$Balance),  highlight = FALSE),
+      list(label = "Total Gains",    value = fmt(final$Gains),    highlight = TRUE)
     )
-  }, striped = TRUE, width = "100%")
+
+    tr_tags <- lapply(rows, function(r) {
+      style <- if (r$highlight) "background-color:#a89a4922; font-weight:600;" else ""
+      tags$tr(style = style,
+        tags$td(style = "padding: 6px 12px;", r$label),
+        tags$td(style = "padding: 6px 12px; text-align: right;", r$value)
+      )
+    })
+
+    tags$table(
+      style = "width:100%; border-collapse: collapse;",
+      tags$tbody(tr_tags)
+    )
+  })
+
+  output$growth_plot <- renderPlot({
+    data <- results()
+
+    # Build stacked area manually
+    x <- data$Year
+    y_invested <- data$Invested / 1000
+    y_balance <- data$Balance / 1000
+
+    par(mar = c(4, 5, 2, 2), family = "sans")
+
+    plot(
+      x,
+      y_balance,
+      type = "n",
+      xlab = "Year",
+      ylab = "Value (\u20ac000s)",
+      las = 1,
+      bty = "l",
+      ylim = c(0, max(y_balance) * 1.05)
+    )
+
+    # colors
+    col_primary <- "#1a3560"
+    col_accent <- "#a89a49"
+
+    # Gains area (top layer, accent/gold)
+    polygon(
+      c(x, rev(x)),
+      c(y_balance, rev(y_invested)),
+      col = paste0(col_accent, "66"),
+      border = NA
+    )
+
+    # Invested area (bottom layer, primary/navy)
+    polygon(
+      c(x, rev(x)),
+      c(y_invested, rep(0, length(x))),
+      col = paste0(col_primary, "55"),
+      border = NA
+    )
+
+    # Lines on top
+    lines(x, y_balance, col = col_accent, lwd = 2)
+    lines(x, y_invested, col = col_primary, lwd = 2)
+
+    legend(
+      "topleft",
+      legend = c("Invested Capital", "Investment Gains"),
+      fill = c(paste0(col_primary, "55"), paste0(col_accent, "66")),
+      border = NA,
+      bty = "n"
+    )
+  })
 }
 
 shinyApp(ui, server)

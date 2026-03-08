@@ -1,6 +1,6 @@
 # Personal Website — Riccardo Spada
 
-**Live site:** https://blade-sp.github.io/personal-website/
+**Live site:** https://blade-sp.github.io/website/
 
 ## Structure
 
